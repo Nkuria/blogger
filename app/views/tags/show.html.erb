@@ -1,0 +1,7 @@
+<h1> Articles Taged with <%= @tag.name %> (<%= @tag.articles.size %>)</h1>
+<ul>
+  <% @tag.articles.each do |article| %>
+    <li> <%= link_to article.title, article_path(article)%></li>
+  <% end %>
+</ul> <br/>
+<%= link_to "<<See all tags", tags_path %>
